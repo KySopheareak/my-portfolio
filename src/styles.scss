@@ -1,1 +1,284 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #8b008b;
+}
+
+.container {
+    padding: 20px 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f6f6;
+    height: 70px;
+    width: 80%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    border: 1px #f1f6f6;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.menu {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.contact-container {
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: blue;
+    color: whitesmoke;
+    font-size: large;
+    font-weight: bold;
+    gap: 8px;
+}
+
+.contact-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.sub-container {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.left-container {
+    width: 50%;
+    position: relative;
+    top: 80px;
+    padding-left: 120px;
+}
+
+.welcome-container {
+    text-align: left;
+}
+
+.welcome-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.welcome-container span {
+    text-decoration: underline;
+    color: blue;
+}
+
+.welcome-container p {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.description {
+    width: 80%;
+}
+
+.description p {
+    font-size: 15px;
+    color: #66666688;
+    line-height: 1.8;
+}
+
+.button-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+.hire-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    height: 40px;
+    width: 120px;
+    border: none;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.telegram-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    height: 40px;
+    width: 125px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.fade-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================================================== */
+
+.right-container {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    top: 80px;
+    width: 350px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #007bff;
+    border-radius: 50%;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.profile-image {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    background: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.tag.web {
+    top: 40px;
+    left: 0px;
+    transform: rotate(-10deg);
+}
+
+.tag.dev {
+    bottom: 200px;
+    right: 0px;
+    transform: rotate(10deg);
+}
+
+.card {
+    perspective: 1000px;
+    /* enables 3D effect */
+}
+
+.flip-animate {
+    transform: rotateY(90deg);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.flip-animate.visible {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+/* =================================================== */
+
+.service-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.mt-200 {
+    margin-top: 200px;
+} 
