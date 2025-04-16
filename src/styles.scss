@@ -130,7 +130,7 @@ body {
 
 .description p {
     font-size: 15px;
-    color: #66666688;
+    color: rgb(102 102 102 / 62%);
     line-height: 1.8;
 }
 
@@ -243,13 +243,13 @@ body {
 
 .tag.web {
     top: 40px;
-    left: 0px;
+    left: 10px;
     transform: rotate(-10deg);
 }
 
 .tag.dev {
     bottom: 200px;
-    right: 0px;
+    right: 10px;
     transform: rotate(10deg);
 }
 
